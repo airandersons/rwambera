@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Rwambera Drumline</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- ========== NAVIGATION BAR ========== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Rwambera<span> Drumline</span></div>
+      <ul class="nav-menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/performances.html">Performances</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1600x500/8B1E1E/D4AF37?text=Drums+calling');">
+    <div class="container page-header-content">
+      <h1 class="reveal-up">Contact & bookings</h1>
+      <div class="breadcrumb reveal-up">
+        <a href="/index.html">Home</a> <span>/</span> Contact
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT INFORMATION CARDS ========== -->
+  <section class="section contact-info-section">
+    <div class="container">
+      <h2 class="section-title reveal-up">Get in touch</h2>
+      <div class="contact-cards-grid">
+        <!-- Location card -->
+        <div class="contact-card reveal-up">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Location</h3>
+          <p class="contact-detail">Busabala, Uganda</p>
+          <p class="contact-sub">Wakiso District, along Lake Victoria</p>
+        </div>
+        <!-- Founder card -->
+        <div class="contact-card reveal-up" data-delay="50">
+          <div class="contact-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Founder</h3>
+          <p class="contact-detail">Lukeman Kyotoyinze</p>
+          <p class="contact-sub">Artistic director & master drummer</p>
+        </div>
+        <!-- Phone placeholder -->
+        <div class="contact-card reveal-up" data-delay="100">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Phone</h3>
+          <p class="contact-detail">+256 700 123 456</p>
+          <p class="contact-sub">(placeholder – call or WhatsApp)</p>
+        </div>
+        <!-- Email placeholder -->
+        <div class="contact-card reveal-up" data-delay="150">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p class="contact-detail">bookings@rwambera.ug</p>
+          <p class="contact-sub">(placeholder – respond within 24h)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING FORM + MAP PLACEHOLDER ========== -->
+  <section class="section booking-section">
+    <div class="container">
+      <div class="booking-grid">
+        <!-- left column: form -->
+        <div class="booking-form-container reveal-left">
+          <h2 class="form-title">Book a performance</h2>
+          <p class="form-subtitle">Tell us about your event – we'll get back to you with a rhythm proposal</p>
+          
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Full name *</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Sarah Nambi" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone"><i class="fas fa-phone"></i> Phone number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+256 700 000 000" required>
+            </div>
+
+            <div class="form-group">
+              <label for="eventType"><i class="fas fa-calendar-alt"></i> Event type</label>
+              <select id="eventType" name="eventType">
+                <option value="wedding">Wedding</option>
+                <option value="corporate">Corporate event</option>
+                <option value="festival">Festival</option>
+                <option value="school">School function</option>
+                <option value="community">Community celebration</option>
+                <option value="private">Private party</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="eventDate"><i class="fas fa-calendar-check"></i> Event date (approx.)</label>
+              <input type="text" id="eventDate" name="eventDate" placeholder="e.g. May 2025 or 15/06/2025">
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message"><i class="fas fa-comment"></i> Message / details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your vision, expected guests, venue..."></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <button type="submit" class="btn btn-primary btn-submit">Book Performance</button>
+            </div>
+            <p class="form-note">We respect your privacy – no spam ever.</p>
+          </form>
+        </div>
+
+        <!-- right column: map placeholder + extra info -->
+        <div class="map-side reveal-right">
+          <div class="map-placeholder">
+            <!-- interactive map simulation -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.999999999998!2d32.5937!3d0.3145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb6a9f3d3d3d%3A0x3d3d3d3d3d3d3d!2sBusabala%2C%20Uganda!5e0!3m2!1sen!2s!4v1620000000000" 
+              style="border:0; width:100%; height:100%;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              title="Map of Busabala area">
+            </iframe>
+            <!-- fallback image if iframe fails (stylistic) -->
+            <div class="map-fallback">
+              <img src="https://via.placeholder.com/600x400/6B4F3C/D4AF37?text=Busabala+Map+Placeholder" alt="map placeholder">
+            </div>
+          </div>
+          <div class="map-note">
+            <p><i class="fas fa-map-pin gold-icon"></i> Busabala, along Lake Victoria — we travel across Uganda & East Africa</p>
+          </div>
+          <!-- quick contact reminder -->
+          <div class="contact-mini">
+            <p><i class="fas fa-drum gold-icon"></i> Prefer to call? <strong>+256 700 123 456</strong> (Lukeman)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4><i class="fas fa-map-marker-alt gold-icon"></i> Busabala, Uganda</h4>
+        <p>land of the drums</p>
+      </div>
+      <div>
+        <h4>Founder: Lukeman Kyotoyinze</h4>
+        <p>master drummer & cultural keeper</p>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="container bottom-credit">
+      <p>© Rwambera Drumline — rhythm. culture. energy.</p>
+    </div>
+  </footer>
+
+  <!-- external javascript -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
