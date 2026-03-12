@@ -154,3 +154,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // (the previous hamburger, scroll reveal, active nav remain unchanged)
 // make sure the reveal observer and nav code are still present above/below
+
+
+// add to /js/main.js (preserve existing code, append contact form handler)
+
+// ========== CONTACT FORM HANDLER (simple prevent default + alert) ==========
+document.addEventListener('DOMContentLoaded', function() {
+  const bookingForm = document.getElementById('bookingForm');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // optional: collect form data
+      const formData = new FormData(bookingForm);
+      const data = Object.fromEntries(formData.entries());
+      console.log('Booking request:', data);
+
+      // user feedback (cultural flair)
+      alert('🎉 Thank you! Your booking request has been sent to Lukeman. We will reply within 24 hours with drumming energy!');
+
+      // you could add actual fetch here later
+      bookingForm.reset(); // optional reset
+    });
+  }
+});
+
+// (all previous code: hamburger, scroll reveal, active nav, lightbox remains unchanged)
