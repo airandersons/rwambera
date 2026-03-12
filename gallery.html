@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Rwambera Drumline</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- ========== NAVIGATION BAR ========== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Rwambera<span> Drumline</span></div>
+      <ul class="nav-menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/performances.html">Performances</a></li>
+        <li><a href="/gallery.html" class="active">Gallery</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE HEADER ========== -->
+  <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1600x500/8B1E1E/FFD966?text=Drummers+collage');">
+    <div class="container page-header-content">
+      <h1 class="reveal-up">Gallery</h1>
+      <div class="breadcrumb reveal-up">
+        <a href="/index.html">Home</a> <span>/</span> Gallery
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== IMAGE GRID GALLERY ========== -->
+  <section class="section gallery-section">
+    <div class="container">
+      <h2 class="section-title reveal-up">Moments captured in rhythm</h2>
+      <p class="section-subtitle reveal-up">Hover to feel the energy — click any image to enlarge</p>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- gallery item 1 - Live Performance -->
+        <div class="gallery-item reveal-up">
+          <img src="https://via.placeholder.com/600x400/D4AF37/8B1E1E?text=Live+Performance" alt="Live Performance" data-caption="Live Performance – drummers on fire">
+          <div class="gallery-caption">Live Performance</div>
+        </div>
+        <!-- 2 - Festival Performance -->
+        <div class="gallery-item reveal-up" data-delay="50">
+          <img src="https://via.placeholder.com/600x400/8B4513/FFD966?text=Festival+Performance" alt="Festival Performance" data-caption="Festival Performance – main stage energy">
+          <div class="gallery-caption">Festival Performance</div>
+        </div>
+        <!-- 3 - Community Event -->
+        <div class="gallery-item reveal-up" data-delay="100">
+          <img src="https://via.placeholder.com/600x400/654321/FFD966?text=Community+Event" alt="Community Event" data-caption="Community Event – village celebration">
+          <div class="gallery-caption">Community Event</div>
+        </div>
+        <!-- 4 - Drum Practice -->
+        <div class="gallery-item reveal-up" data-delay="150">
+          <img src="https://via.placeholder.com/600x400/9E6B3E/FFD966?text=Drum+Practice" alt="Drum Practice" data-caption="Drum Practice – young talents learning">
+          <div class="gallery-caption">Drum Practice</div>
+        </div>
+        <!-- 5 - Cultural Celebration -->
+        <div class="gallery-item reveal-up" data-delay="200">
+          <img src="https://via.placeholder.com/600x400/7A4C1D/FFD966?text=Cultural+Celebration" alt="Cultural Celebration" data-caption="Cultural Celebration – traditional attire">
+          <div class="gallery-caption">Cultural Celebration</div>
+        </div>
+        <!-- 6 - Dance and Drum Show -->
+        <div class="gallery-item reveal-up" data-delay="250">
+          <img src="https://via.placeholder.com/600x400/5A3E1B/FFD966?text=Dance+and+Drum+Show" alt="Dance and Drum Show" data-caption="Dance and Drum Show – choreographed energy">
+          <div class="gallery-caption">Dance and Drum Show</div>
+        </div>
+        <!-- 7 - Wedding Procession -->
+        <div class="gallery-item reveal-up" data-delay="300">
+          <img src="https://via.placeholder.com/600x400/8B1E1E/FFD966?text=Wedding+Procession" alt="Wedding Procession" data-caption="Wedding Procession – joyful rhythms">
+          <div class="gallery-caption">Wedding Procession</div>
+        </div>
+        <!-- 8 - School Workshop -->
+        <div class="gallery-item reveal-up" data-delay="350">
+          <img src="https://via.placeholder.com/600x400/4A1F1F/D4AF37?text=School+Workshop" alt="School Workshop" data-caption="School Workshop – passing the beat">
+          <div class="gallery-caption">School Workshop</div>
+        </div>
+        <!-- 9 - Fire Drummers (extra) -->
+        <div class="gallery-item reveal-up" data-delay="400">
+          <img src="https://via.placeholder.com/600x400/A0522D/FFD966?text=Fire+Drummers" alt="Fire Drummers" data-caption="Fire Drummers – night spectacle">
+          <div class="gallery-caption">Fire Drummers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LIGHTBOX MODAL (hidden by default) ========== -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close"><i class="fas fa-times"></i></span>
+    <span class="lightbox-prev"><i class="fas fa-chevron-left"></i></span>
+    <span class="lightbox-next"><i class="fas fa-chevron-right"></i></span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ========== CALL TO ACTION (optional subtle) ========== -->
+  <section class="section cta cta-small" style="background: var(--deep-red); color: white;">
+    <div class="container cta-content">
+      <h3 class="reveal-up">Experience the rhythm live</h3>
+      <a href="/contact.html" class="btn btn-outline btn-light reveal-up">Book a show</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4><i class="fas fa-map-marker-alt gold-icon"></i> Busabala, Uganda</h4>
+        <p>land of the drums</p>
+      </div>
+      <div>
+        <h4>Founder: Lukeman Kyotoyinze</h4>
+        <p>master drummer & cultural keeper</p>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div class="container bottom-credit">
+      <p>© Rwambera Drumline — rhythm. culture. energy.</p>
+    </div>
+  </footer>
+
+  <!-- external javascript -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
