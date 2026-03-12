@@ -832,3 +832,282 @@ body {
     font-size: 0.9rem;
   }
   }
+
+
+
+/* additional / performances page specific styles – add to /css/styles.css */
+
+/* section subtitle */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--earth-brown);
+  margin-top: -1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+/* events grid (cards) */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  background: white;
+  padding: 2.2rem 1.8rem;
+  border-radius: 30px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  text-align: center;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--deep-red), var(--gold));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.event-card:hover::after {
+  transform: scaleX(1);
+}
+
+.event-card:hover {
+  transform: translateY(-15px);
+  border-color: var(--gold);
+  box-shadow: 0 30px 40px rgba(139,30,30,0.15);
+}
+
+.event-icon {
+  background: var(--deep-red);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.8rem;
+  color: white;
+  transition: var(--transition);
+  border: 4px solid var(--gold);
+}
+
+.event-card:hover .event-icon {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--deep-red);
+  transform: rotate(8deg) scale(1.05);
+}
+
+.event-card h3 {
+  font-size: 1.8rem;
+  color: var(--deep-red);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.event-card p {
+  color: #2d2d2d;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.event-tag {
+  background: rgba(212,175,55,0.15);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--earth-brown);
+  letter-spacing: 0.5px;
+  border: 1px solid var(--gold);
+}
+
+/* experience section */
+.experience-section {
+  background: #faf3e8;  /* warm earth tone */
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.experience-text h2 {
+  font-size: 2.8rem;
+  color: var(--deep-red);
+  margin-bottom: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+.experience-lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #3a2a1f;
+  margin-bottom: 2rem;
+  border-left: 6px solid var(--gold);
+  padding-left: 1.5rem;
+}
+
+.experience-features {
+  margin: 2.5rem 0;
+}
+
+.feature {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.feature i {
+  font-size: 1.8rem;
+  min-width: 2.2rem;
+  color: var(--deep-red);
+}
+
+.feature strong {
+  color: var(--deep-red);
+  font-weight: 700;
+}
+
+.experience-outro {
+  font-size: 1.1rem;
+  background: rgba(212,175,55,0.08);
+  padding: 1.8rem;
+  border-radius: 20px;
+  border-left: 8px solid var(--deep-red);
+  line-height: 1.7;
+}
+
+.experience-visual img {
+  width: 100%;
+  border-radius: 40px 40px 40px 0;
+  box-shadow: 25px 25px 0 var(--deep-red);
+  transition: var(--transition);
+  border: 4px solid white;
+}
+
+.experience-visual img:hover {
+  box-shadow: 25px 25px 0 var(--gold);
+  transform: translate(-5px, -5px);
+}
+
+.visual-caption {
+  margin-top: 1.2rem;
+  font-style: italic;
+  color: #5a4a3a;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* booking cta */
+.booking-cta {
+  padding: 5rem 0;
+  color: white;
+  text-align: center;
+}
+
+.booking-cta-content h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+  color: var(--gold);
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+}
+
+.booking-cta-content p {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.booking-note {
+  font-size: 1rem !important;
+  margin-top: 2rem;
+  opacity: 0.8;
+  background: rgba(0,0,0,0.3);
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+}
+
+.btn-large {
+  padding: 1.2rem 3.5rem;
+  font-size: 1.5rem;
+  background: var(--deep-red);
+  border: 2px solid var(--gold);
+}
+
+.btn-large:hover {
+  background: var(--gold);
+  color: var(--black);
+  border-color: white;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .experience-visual {
+    order: -1;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .experience-text h2 {
+    font-size: 2.2rem;
+  }
+  .booking-cta-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-card {
+    padding: 1.8rem 1.2rem;
+  }
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+  .feature i {
+    margin-bottom: 0.5rem;
+  }
+  .experience-visual {
+    max-width: 100%;
+  }
+}
