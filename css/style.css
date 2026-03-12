@@ -462,3 +462,373 @@ body {
     padding: 0 1.2rem;
   }
 }
+
+
+
+
+/* additional / about page specific styles – add to /css/styles.css */
+
+/* page header banner */
+.page-header {
+  background-size: cover;
+  background-position: center 30%;
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-bottom: 6px solid var(--gold);
+}
+
+.page-header-content h1 {
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumb {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.breadcrumb a {
+  color: var(--cream);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+  border-bottom-color: var(--gold);
+  color: var(--gold);
+}
+
+.breadcrumb span {
+  margin: 0 0.5rem;
+  color: var(--gold);
+}
+
+/* story section */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.story-text h2 {
+  font-size: 2.6rem;
+  color: var(--deep-red);
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.founder-tag {
+  background: rgba(212, 175, 55, 0.15);
+  display: inline-block;
+  padding: 0.3rem 1.8rem;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--earth-brown);
+  font-weight: 600;
+  border-left: 4px solid var(--gold);
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 30px 30px 30px 0;
+  box-shadow: 20px 20px 0 var(--deep-red);
+  transition: var(--transition);
+}
+
+.story-image img:hover {
+  box-shadow: 20px 20px 0 var(--gold);
+  transform: translate(-5px, -5px);
+}
+
+.image-caption {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #5a5a5a;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* mission vision cards */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mv-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s;
+  border-bottom: 6px solid transparent;
+}
+
+.mv-card:hover {
+  transform: translateY(-15px);
+  border-bottom-color: var(--deep-red);
+  box-shadow: 0 25px 40px rgba(139,30,30,0.15);
+}
+
+.mv-icon {
+  background: var(--gold);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.8rem;
+  font-size: 2.8rem;
+  color: var(--black);
+  transition: var(--transition);
+}
+
+.mv-card:hover .mv-icon {
+  background: var(--deep-red);
+  color: white;
+  transform: rotate(5deg) scale(1.05);
+}
+
+.mv-card h3 {
+  font-size: 2rem;
+  color: var(--deep-red);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.mv-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* founder section */
+.founder-section {
+  background: var(--cream);
+  border-top: 2px dashed var(--gold);
+  border-bottom: 2px dashed var(--gold);
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.founder-image {
+  position: relative;
+}
+
+.founder-image img {
+  width: 100%;
+  border-radius: 40px 40px 40px 0;
+  border: 6px solid white;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  transition: var(--transition);
+}
+
+.founder-image img:hover {
+  transform: scale(1.02);
+  border-color: var(--gold);
+}
+
+.founder-badge {
+  background: var(--deep-red);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  display: inline-block;
+  border-radius: 50px;
+  margin-top: 1.2rem;
+  margin-left: 1rem;
+  box-shadow: 4px 4px 0 var(--gold);
+}
+
+.founder-bio h2 {
+  font-size: 3rem;
+  color: var(--deep-red);
+  margin-bottom: 0.3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.founder-bio .subtitle {
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  border-bottom: 2px solid rgba(212,175,55,0.4);
+  padding-bottom: 0.8rem;
+}
+
+.founder-bio p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.founder-quote {
+  background: rgba(212,175,55,0.1);
+  padding: 1.5rem;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-style: italic;
+  border-left: 8px solid var(--gold);
+  margin-top: 2rem;
+  color: #2a2a2a;
+}
+
+.founder-quote i {
+  color: var(--deep-red);
+  margin-right: 0.8rem;
+  font-size: 1.8rem;
+}
+
+/* impact section */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.impact-item {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.impact-item:hover {
+  border-color: var(--gold);
+  transform: scale(1.03);
+  background: #fffcf0;
+}
+
+.impact-item i {
+  font-size: 3rem;
+  color: var(--deep-red);
+  margin-bottom: 1rem;
+}
+
+.impact-item h3 {
+  font-size: 1.4rem;
+  color: var(--earth-brown);
+  margin-bottom: 0.8rem;
+}
+
+.impact-item p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.impact-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.impact-strip img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: var(--transition);
+}
+
+.impact-strip img:hover {
+  border-color: var(--gold);
+  transform: translateY(-8px);
+}
+
+/* CTA small */
+.cta-small {
+  padding: 3.5rem 0;
+  background: var(--deep-red);
+}
+
+.cta-small h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+}
+
+.btn-light {
+  border-color: white;
+  color: white;
+}
+
+.btn-light:hover {
+  background: white;
+  color: var(--deep-red);
+}
+
+/* responsive for about page */
+@media (max-width: 992px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .founder-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .impact-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-strip {
+    grid-template-columns: 1fr;
+  }
+  .founder-bio h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header-content h1 {
+    font-size: 2.5rem;
+  }
+  .story-text h2 {
+    font-size: 2rem;
+  }
+  .founder-badge {
+    font-size: 0.9rem;
+  }
+  }
