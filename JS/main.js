@@ -72,3 +72,85 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 // keeping js minimal – just for demo
 
 console.log('Rwambera Drumline — rhythm awakens');
+
+
+
+// add to existing /js/main.js (preserve previous code, append this gallery lightbox logic)
+
+// ========== GALLERY LIGHTBOX ==========
+document.addEventListener('DOMContentLoaded', function() {
+  const galleryItems = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.querySelector('.lightbox-close');
+  const prevBtn = document.querySelector('.lightbox-prev');
+  const nextBtn = document.querySelector('.lightbox-next');
+
+  if (!lightbox || !galleryItems.length) return; // not on gallery page
+
+  let currentIndex = 0;
+  const images = [];
+
+  // build array from gallery images (with caption from data-caption)
+  galleryItems.forEach((img, index) => {
+    const src = img.src;
+    const caption = img.getAttribute('data-caption') || img.alt || 'Rwambera Drumline';
+    images.push({ src, caption });
+
+    img.addEventListener('click', (e) => {
+      e.preventDefault();
+      currentIndex = index;
+      openLightbox(currentIndex);
+    });
+  });
+
+  function openLightbox(index) {
+    lightbox.classList.add('active');
+    updateLightboxContent(index);
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+  }
+
+  function updateLightboxContent(index) {
+    const imgData = images[index];
+    lightboxImg.src = imgData.src;
+    lightboxImg.alt = imgData.caption;
+    lightboxCaption.textContent = imgData.caption;
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateLightboxContent(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateLightboxContent(currentIndex);
+  }
+
+  // event listeners
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+  if (prevBtn) prevBtn.addEventListener('click', prevImage);
+  if (nextBtn) nextBtn.addEventListener('click', nextImage);
+
+  // keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  });
+
+  // click outside image to close (but not on navigation arrows)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+});
+
+// (the previous hamburger, scroll reveal, active nav remain unchanged)
+// make sure the reveal observer and nav code are still present above/below
